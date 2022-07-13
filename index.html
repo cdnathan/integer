@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-tofit=no">
+    <title>Trabajo integrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="contaier-fluid"> 
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(150, 150, 150);">
+            <div class="container">
+
+                <a class="navbar-brand" href="#">
+                    <img src="C:\Users\alber\Downloads\imagenes_integrador_front\codoacodo.png" height="35" class="d-inline-block align-text-center">
+                    Conf Bs. As.
+                </a>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <li class="nav-link">
+                            <a class="nav-link" href="#" style="color: aliceblue;">La conferencia</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="nav-link" href="#">Los oradores</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="nav-link" href="#">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="nav-link" href="#">Conviértete en orador</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="nav-link" href="#" style="color: rgb(22, 165, 53);">Comprar tickets</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+           
+        <div class="container-fluid">
+               
+          <div class="card img-fluid" style="width:100%">
+            <img src="ba3.jpg" width="1330" height="700">
+              <div class="card-img-overlay text-end text-light">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-6"></div>
+                      <div class="col-5 p-0 m-0 text-light text-end mh-100">
+                        <br><br><br><br><br><br><br><br><br>
+                        <h1 class="card-title" style="color: white;">Conf Bs As</h1>
+                        <p class="card-text" style="color: white;">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                        <a href="#" class="btn btn-outline-light text-light">Quiero ser orador</a>
+                        <a href="#" class="btn btn-success">Comprar tickets</a>
+                      </div>
+                      <div class="col-1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br><br>
+
+            <div id="compra tickets" class="d-flex justify-content-center bg-light mb-0">
+              <div class="btn btn-outline-primary m-1" id="Estudiante">
+                <p class="h5 text-dark">Estudiante</p>
+                <p class="text-dark">Tienen un descuento</p>
+                <p class="text-dark">80%</p>
+                <p class="text-muted"><small>*presentar documentación</small></p>
+              </div>
+
+              <div class="btn btn-outline-success m-1" id="Trainee">
+                <p class="h5 text-dark">Trainee</p>
+                <p class="text-dark">Tienen un descuento</p>
+                <p class="text-dark">50%</p>
+                <p class="text-muted"><small>*presentar documentación</small></p>
+              </div>
+
+              <div class="btn btn-outline-warning m-1" id="Junior">
+                <p class="h5 text-dark">Junior</p>
+                <p class="text-dark">Tienen un descuento</p>
+                <p class="text-dark">15%</p>
+                <p class="text-muted"><small>*presentar documentación</small></p>
+              </div>               
+            </div>
+
+            <p class="text-uppercase text-center h2">valor de ticket $200</p>
+
+            <div class=""justify-content-center>
+              <form>
+                <div class="row">
+                  <div class="col-3"></div>
+                  <div class="col-3">
+                    <input type="text" class="form-control m-2" placeholder="Nombre" name="Nombre">
+                  </div>
+                  <div class="col-3">
+                    <input type="text" class="form-control m-2" placeholder="Apellido" name="Apellido">
+                  </div>
+                </div>
+                <div class="row">
+                  
+                  <div class="col-6 mx-auto">
+                  <input type="email" class="form-control m-2" placeholder="Correo" name="Correo">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3"></div>
+                  <div class="col-3">
+                    <p class="m-2">Cantidad</p>
+                  </div>
+                  <div class="col-3">
+                    <p class="m-2">Categoría</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3"></div>
+                  <div class="col-3">
+                    <input type="number" value="1" min="1" class="form-control m-2" placeholder="cantidad" id="cantidad">
+                  </div>
+                  <div class="col-3">
+                    <div class="dropdown m-2">
+                      <select class="form-select" id="selectorCategoria">
+                        <option value="80">Estudiante</option>
+                        <option value="50">Trainee</option>
+                        <option value="15">Junior</option>
+                      </select>
+                  </div>
+                  
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 mx-auto">
+                  <input id="total" readonly class="form-control text-primary p-2 m-2" value="Total a pagar: $">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3"></div>
+                  <div class="col-3 d-grid">
+                    <button id="btnVerde" type="reset" class="btn" >Borrar</button>
+                  </div>
+                  <div class="col-3 d-grid">
+                    <button class="btn" id="resumen">Resumen</button>
+                  </div>
+                </div>
+                
+              </form>
+              <br>
+              
+            </div>
+        </div>
+            
+
+            <script>      
+              function calcular () {
+                  var cantidad = document.querySelector("#cantidad").value;
+                  
+                  var precioU= 200;
+                  
+                  var categoria = document.querySelector("#selectorCategoria").value;
+      
+                  /*console.log("cantidad: "+cantidad)
+                  console.log("precioUnidad: "+precioUnidad)
+                  console.log("categoria: "+categoria)*/
+                  var precioFinal=precioU-(precioU*categoria/100)
+                
+                  var total = precioFinal*cantidad;
+                  
+                  document.querySelector("#total").value="Total a pagar: " + String(total);
+                  }
+              
+              function selecDescEstudiante () {
+                document.querySelector("#selectorCategoria").value = "80"
+                //console.log("presiono Estudiante")
+              }
+      
+              function selecDescTrainee () {
+                document.querySelector("#selectorCategoria").value = "50"
+                //console.log("presiono Trainee")
+              }
+      
+              function selecDescJunior () {
+                document.querySelector("#selectorCategoria").value = "15"
+                //console.log("presiono Junior")
+              }
+      
+              
+              botonResumen = document.querySelector("#resumen");
+              botonResumen.addEventListener('click', calcular);
+              botonEstudiante = document.querySelector("#Estudiante");
+              botonEstudiante.addEventListener('click', selecDescEstudiante);
+              botonTrainee = document.querySelector("#Trainee");
+              botonTrainee.addEventListener('click', selecDescTrainee);
+              botonJunior = document.querySelector("#Junior");
+              botonJunior.addEventListener('click', selecDescJunior);
+              
+          </script>
+
+
+          <div class="text-dark text-center">
+            <br>
+            <h4>CONOCE A LOS <br> ORADORES</h4>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row d-flex justify-content-center" >
+              <div class="col-3">
+                <div class="card" >
+                  <img class="card-img-top" src="sj.jpg" alt="Steve Jobs">
+                  <div class="card-body">
+                    <span class="badge bg-warning text-dark">Javascript</span>
+                    <span class="badge bg-info text-light">React</span>
+                    <h5 class="card-title">Steve Jobs</h5>
+                    <p class="card-text"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small></p>
+                  </div>
+                </div>
+              </div>
+
+          <div class="col-3">
+            <div class="card">
+              <img class="card-img-top" src="bg.jpg" alt="Bill Gates">
+              <div class="card-body">
+                <span class="badge bg-warning text-dark">Javascript</span>
+                <span class="badge bg-info text-light">React</span>                  
+                <h5 class="card-title">Bill Gates</h5>
+                <p class="card-text"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small></p>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-3">
+          <div class="card">
+            <img class="card-img-top" src="al.jpeg" alt="Ada Lovelace">
+            <div class="card-body">
+              <span class="badge bg-secondary text-light">Negocios</span>
+              <span class="badge bg-danger text-light">Startups</span>                  
+              <h5 class="card-title">Ada Lovelace</h5>
+              <p class="card-text"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small></p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>              
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <img class="img-fluid" src="honolulu.jpg" alt="honolulu">
+      </div>
+      <div class="col-6 p-3 bg-dark text-light">
+        <h2>Bs As - Octubre</h2>
+        <p><small>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre del Honolulu se refiere aa área urbana en la costa sureste de la isla de Ohau, la ciudad y el condado de Honolulu han formado una ciudad condado consolidada que cubre toda la ciudad (aproximadamente 600km2 de superficie).</small></p>
+        <button class="btn btn-outline-light text-light">Conocé más</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="text-center"><p class="p-0 m-0"><small>CONVIÉRTETE EN UN</small><h2>ORADOR</h2></p><p>Anótate como orador para dar una <abbr title="charla ignite">charla ignite</abbr>. Cuéntanos de qué quieres hablar!</p></div>
+  
+  <div class="fluid-container" p-0 m-0>
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+          <form>
+            <div class="row p-2">
+              <div class="col p-0 m-2">
+                <input type="text" class="form-control" placeholder="Nombre">
+              </div>
+              <div class="col p-0 m-2">
+                <input type="text" class="form-control" placeholder="Apellido">
+              </div>
+            </div>
+            <div class="row p-0 m-1">
+              <label for="comment"></label>
+              <textarea class="form-control" placeholder="Sobre qué quieres hablar?" rows="4"></textarea>
+          </div>
+          <p class="small">Recuerda incluir un titulo para tu charla</p>
+          <div class="d-grid">
+            <button class="btn btn-lg btn-success">Enviar</button>
+          </div>
+          </form>
+      </div>
+      <div class="col-3"></div>
+    </div>
+</div>
+ <br><br>
+        <footer>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link mx-5" href="#">Preguntas<br>Frecuentes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-5" href="#">Contáctanos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-5" href="#">Prensa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-5" href="#">Conferencias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-5" href="#">Términos y<br>condiciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-5" href="#">Privacidad</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-5" href="#">Estudiantes</a>
+                  </li>
+                </ul>
+            </nav>
+          </footer>
+    </div>
+</body>
+</html>
